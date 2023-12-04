@@ -1,9 +1,13 @@
 import openai
-from secret_key import openai_key 
 import json
 import pandas as pd
+from dotenv import load_dotenv
+import os
 
-openai.api_key = openai_key
+load_dotenv() 
+api_key = os.getenv("openai_key")  
+openai.api_key = api_key  
+
 
 
 
